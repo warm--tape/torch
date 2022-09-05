@@ -16,9 +16,9 @@ export default function App() {
       const cameraAllowed = await Torch.requestCameraPermission(
         "Camera Permissions", // dialog title
         "We require camera permissions to use the torch on the back of your phone." // dialog body
-        );
+      );
         
-        if (cameraAllowed) {
+      if (cameraAllowed) {
         setTorchOn(!torchOn);
         Torch.switchState(this.isTorchOn);
       }
